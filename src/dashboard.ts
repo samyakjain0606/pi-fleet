@@ -2,19 +2,14 @@
  * TUI dashboard component — shows all worktrees with live pi status.
  */
 
+import { type Theme } from "@mariozechner/pi-coding-agent";
 import { matchesKey, Key, truncateToWidth, visibleWidth } from "@mariozechner/pi-tui";
-import { type WorktreeEntry, relativeTime } from "./discovery.ts";
+import { type WorktreeEntry, relativeTime } from "./discovery.js";
 
 export interface FleetAction {
 	type: "open" | "switch" | "launch" | "create" | "remove";
 	entry?: WorktreeEntry; // undefined for "create"
 }
-
-type Theme = {
-	fg: (color: string, text: string) => string;
-	bg: (color: string, text: string) => string;
-	bold: (text: string) => string;
-};
 
 export class FleetDashboard {
 	private entries: WorktreeEntry[];

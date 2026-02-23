@@ -16,11 +16,11 @@
 import type { ExtensionAPI, ExtensionCommandContext } from "@mariozechner/pi-coding-agent";
 import { execSync } from "child_process";
 import { basename } from "path";
-import { writeHeartbeat, removeHeartbeat, type Heartbeat } from "./heartbeat.ts";
-import { discoverFleet, isGitRepo, getRepoName, type WorktreeEntry } from "./discovery.ts";
-import { FleetDashboard, type FleetAction } from "./dashboard.ts";
-import { getPiLaunchCommand, getCdCommand } from "./terminal.ts";
-import { createWorktree, removeWorktree, getWorktreeParentDir } from "./worktree.ts";
+import { writeHeartbeat, removeHeartbeat, type Heartbeat } from "./heartbeat.js";
+import { discoverFleet, isGitRepo, getRepoName, type WorktreeEntry } from "./discovery.js";
+import { FleetDashboard, type FleetAction } from "./dashboard.js";
+import { getPiLaunchCommand, getCdCommand } from "./terminal.js";
+import { createWorktree, removeWorktree, getWorktreeParentDir } from "./worktree.js";
 
 // ── Heartbeat state ──────────────────────────────────────────────────────────
 

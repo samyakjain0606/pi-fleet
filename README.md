@@ -6,10 +6,14 @@ When you're working on multiple features in parallel using `git worktree`, each 
 
 ## Install
 
-Copy or clone into your global pi extensions directory:
+```bash
+pi install npm:pi-fleet
+```
+
+Or install locally for a project:
 
 ```bash
-git clone https://github.com/samyakjain0606/pi-fleet.git ~/.pi/agent/extensions/pi-fleet
+pi install -l npm:pi-fleet
 ```
 
 Then `/reload` in any running pi session.

@@ -9,7 +9,7 @@ import { execSync } from "child_process";
 import { existsSync, readdirSync } from "fs";
 import { homedir } from "os";
 import { basename, dirname, join, resolve } from "path";
-import { readAllHeartbeats, type Heartbeat } from "./heartbeat.ts";
+import { readAllHeartbeats, type Heartbeat } from "./heartbeat.js";
 
 export interface WorktreeEntry {
 	path: string;
